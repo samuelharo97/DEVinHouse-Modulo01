@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(255, 255, 0, 0.623);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /*   height: 2000px; */
+}
+
+.image-wrapper {
+  display: flex;
+  gap: 10px;
+  padding: 50px 10%;
+}
+
+.image-wrapper img {
+  height: 450px;
+  width: 320px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: brown;
+  background-image: url(https://media.istockphoto.com/photos/colorful-background-red-blue-and-yellow-orange-colors-abstract-modern-picture-id1332601848?b=1&k=20&m=1332601848&s=170667a&w=0&h=_zrnj0NBLjjuMfPvSqxEHn2-oVlExHhOPXP9HsOO_eI=);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 50px;
+}
+
+span {
+  font-weight: bold;
+}
+
+main {
+  padding: 40px;
+}
+
+p {
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 150px;
+  height: 80px;
+  border-radius: 20px;
+}
+
+button img {
+  width: fit-content;
+  height: 80%;
+}
+
+header {
+  align-items: center;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  background-color: rgb(221, 111, 8);
+  height: 40px;
+  padding-left: 45px;
+}
+
+ul {
+  height: 40px;
+}
+
+header ul,
+header li {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+header a {
+  padding-top: 10px;
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  animation-duration: 300ms;
+  animation-name: color-change;
+  background-color: rgba(190, 97, 9, 1);
+  font-size: 17px;
+}
+
+.video-wrapper {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: max-content;
+  background-color: rgb(39, 39, 190);
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  bottom: 0;
+  height: max-content;
+  background-color: rgb(39, 39, 190);
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: rgb(150, 76, 0.4);
+  }
+  50% {
+    background-color: rgba(121, 62, 6, 0.7);
+  }
+
+  100% {
+    background-color: rgba(190, 97, 9, 1);
+  }
+}
