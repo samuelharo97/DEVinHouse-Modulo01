@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  font-size: 62, 5%;
+  --main-color: hsl(42, 100%, 57%);
+}
+
+body {
+  width: 100vw;
+  background-image: url(./images/event2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ----------------------------        HEADER         ------------------------------  */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 96px 0 96px;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 4rem;
+  text-transform: uppercase;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+li:nth-child(5) {
+  border: 1px solid var(--main-color);
+  margin-left: 128px;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: 0.05em;
+  color: var(--main-color);
+}
+
+h1 {
+  padding-top: 50px;
+  text-align: center;
+  color: var(--main-color);
+}
+
+/* --------------------------------        MAIN       ------------------------------  */
+
+main {
+  width: 100%;
+  color: var(--main-color);
+  padding: 5rem 10rem;
+}
+
+.main-act {
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-act img {
+  width: 600px;
+  align-self: center;
+  padding: 15px 0;
+}
+
+.other-act-card {
+  padding-top: 50px;
+}
+
+/* .other-act-card p {
+  align-self: center;
+  position: absolute;
+} */
+
+.other-acts-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  color: white;
+}
+
+.other-acts-container img {
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+}
+
+h3 {
+  position: absolute;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 50px;
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2.7rem;
+}
+
+/* --------------------------------        FOOTER       ------------------------------  */
