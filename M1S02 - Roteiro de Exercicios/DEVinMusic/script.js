@@ -1,11 +1,4 @@
 sendButton = document.getElementById('send')
-firstName = String(document.getElementById('inputName').value)
-
-lastName = String(document.getElementById('inputSurname').value)
-
-emailAdress = String(document.getElementById('inputEmail').value)
-
-description = String(document.getElementById('inputTextarea').value)
 
 function getInfo() {
   firstName = String(document.getElementById('inputName').value)
@@ -23,8 +16,8 @@ function getInfo() {
 sendButton.addEventListener('click', function () {
   getInfo()
   console.log(
-    `Formulário de contato => Nome: ${firstName} ${lastName}
+`Formulário de contato => Nome: ${firstName} ${lastName}
 E-mail: ${emailAdress}
-Descriçao: ${description}`
+Descrição: ${description}`
   )
 })
