@@ -13,6 +13,7 @@
 body {
   width: 100%;
   height: 100%;
+  min-width: 320px;
 
   /* background-image: url(./images/event2.jpg);
   background-size: cover;
@@ -38,14 +39,6 @@ a:hover {
 }
 
 /* ----------------------------        HEADER         ------------------------------  */
-/* header {
-  background: rgb(196, 8, 8);
-  background: linear-gradient(
-    0deg,
-    rgba(196, 8, 8, 1) 0%,
-    rgba(0, 0, 0, 1) 24%
-  );
-} */
 
 nav {
   display: flex;
@@ -57,9 +50,13 @@ nav {
   top: 0;
 }
 
+nav svg {
+  display: none;
+}
+
 ul {
   display: flex;
-  gap: 4rem;
+  gap: 32px;
   text-transform: uppercase;
 }
 
@@ -94,6 +91,7 @@ main {
   width: 100%;
   color: var(--main-color);
   padding: 5rem 5rem;
+  object-fit: contain;
 }
 
 .main-act {
@@ -104,15 +102,20 @@ main {
   font-size: 17px;
   display: flex;
   flex-direction: column;
+  object-fit: contain;
+
   /*   border: 1px solid var(--main-color);
  */
 }
 
 .main-act img {
-  width: 600px;
+  position: relative;
+  z-index: 0;
+  width: 40rem;
   align-self: center;
   border: 3px solid var(--main-color);
   margin: 25px;
+  object-fit: contain;
 }
 
 .other-act-card {
@@ -121,11 +124,6 @@ main {
   padding-top: 50px;
   width: 28%;
 }
-
-/* .other-act-card p {
-  align-self: center;
-  position: absolute;
-} */
 
 .other-acts-container {
   display: flex;
@@ -159,13 +157,14 @@ h3 {
   position: absolute;
   font-size: 30px;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
   color: var(--main-color);
 }
 
 /* --------------------------------        FORM       ------------------------------  */
 
-footer {
+.form {
+  object-fit: contain;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -182,11 +181,15 @@ footer {
 form {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 70px;
   justify-self: center;
+  text-align: ;
   color: var(--main-color);
-  width: 750px;
-  height: 700px;
+  width: 42rem;
+  height: fit-content;
+  padding: 16px;
+  border: 5px solid var(--main-color);
+  border-radius: 3px;
   background: rgb(232, 83, 5);
   background: linear-gradient(
     0deg,
@@ -210,6 +213,13 @@ form input {
   padding-left: 10px;
 }
 
+fieldset {
+  font-size: 24px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
 .input-wrapper span {
   font-size: 12px;
   color: hsla(258, 14%, 77%, 0.5);
@@ -219,12 +229,66 @@ form input {
   color: hsla(258, 14%, 77%, 1);
 }
 
-.personal-info {
+#email {
   display: flex;
-  justify-content: space-evenly;
-}
-.personal-info input {
-  width: 100%;
+  justify-self: center;
 }
 
+textarea {
+  width: 100%;
+  height: 90px;
+}
+
+button {
+  width: 40%;
+  margin: 0 auto;
+  background-color: var(--main-color);
+  height: 4rem;
+  border-radius: 9999px;
+}
+
+.personal-info {
+  display: flex;
+  align-items: center;
+}
 /* --------------------------------        FOOTER       ------------------------------  */
+
+@media (max-width: 1130px) {
+  nav li {
+    display: none;
+  }
+  nav svg {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 910px) {
+  main img {
+    text-align: center;
+    height: 250px;
+    width: 250px;
+  }
+
+  .main-act img {
+    border: none;
+  }
+
+  .other-act-card {
+    width: 35%;
+  }
+
+  form {
+    transform: scale(80%);
+  }
+}
+
+@media (max-width: 740px) {
+  .other-acts-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    min-width: 660px;
+  }
+}

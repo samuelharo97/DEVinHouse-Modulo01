@@ -19,14 +19,14 @@
       <nav>
         <div class="logo"><a href="#">DEVinMUSIC</a></div>
         <ul>
-          <li><a href="#"> Evento </a></li>
-          <li><a href="#"> Sobre </a></li>
+          <li><a href="#"> Events </a></li>
+          <li><a href="#"> About </a></li>
           <li>
             <a
               href="https://api.whatsapp.com/send?phone=5515998013934"
               target="_blank"
             >
-              Contato
+              Contact
             </a>
           </li>
           <li>
@@ -34,27 +34,36 @@
               href="https://www.trivago.com.br/pt-BR/odr/hotéis-brasil?tc=22&search=200-33"
               target="_blank"
             >
-              Hospede-se</a
+              Nearby Hotels</a
             >
           </li>
-          <li><a href="#"> Formulário </a></li>
+          <li><a href="#"> BUY TICKETS HERE </a></li>
         </ul>
+        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 9H21" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 1H21" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 17L21 17" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          
       </nav>
     </header>
     <div class="page">
       <h1>
         DEVinMUSIC, <br />
-        Os melhores shows estão aqui.
+        the best concerts of your life.
       </h1>
       <main>
         <h3>Em destaque na DEVinMUSIC:</h3>
 
         <div class="main-act">
           <h2><strong>Kanye West.</strong></h2>
-          <img
-            src="https://livespot360.com/wp-content/uploads/kanye.jpg"
-            alt="Ato principal, Kanye West"
-          />
+          
+            <img
+              src="https://livespot360.com/wp-content/uploads/kanye.jpg"
+              alt="Ato principal, Kanye West"
+            />
+         
+          
           <time>
             domingo, 10 de julho de 2022 <br />
             ás 22:00
@@ -84,11 +93,11 @@
             </div>
             <div class="other-act-card">
               <img
-                src="https://static1.purepeople.com.br/articles/1/75/80/1/@/1037611-o-casamento-de-joelma-e-chimbinha-624x600-3.jpg"
-                alt="Secundary act, Banda Calypso"
+                src="https://i.scdn.co/image/ab6761610000e5ebc75afcd5a9027f60eaebb5e4"
+                alt="Secundary act, JAY-Z"
               />
               <p>
-                <strong>O retorno da banda Calypso.</strong>
+                <strong>JAY-Z.</strong>
               </p>
               <time>segunda-feira, 47 de novembro de 2022 ás 22:00</time>
             </div>
@@ -110,7 +119,7 @@
               <p>
                 <strong>O retorno da banda Calypso.</strong>
               </p>
-              <time>segunda-feira, 47 de novembro de 2022 ás 22:00</time>
+              <time>Monday, 02/17/22 10PM</time>
             </div>
             <div class="other-act-card">
               <img
@@ -126,28 +135,40 @@
         </section>
       </main>
     </div>
-    <footer>
+    <div class="form">
         <form action="">
-          <h4>Formulário</h4>
-        <fieldset>Informações pessoais</fieldset>
+          <h4>Talk to us</h4>
+        <fieldset>Personal Information</fieldset>
       <div class="personal-info">
         <div class="input-wrapper">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" />
+          <label for="name">First Name</label>
+          <input type="text" name="name" id="name"required />
         </div>
         <div class="input-wrapper">
-          <label for="surname">Sobrenome</label>
-          <input type="text" name="surname" id="surname" />
+          <label for="surname">Last Name</label>
+          <input type="text" name="surname" id="surname " required/>
         </div>
 
       </div>
         <div class="input-wrapper">
-          <label for="email">Email <span>(Digite um email válido)</span></label>
-          <input type="email" name="email" id="email">
+          <label for="email">Email <span>(please use a valid email)</span></label>
+          <input type="email" name="email" id="email" required>
         </div>
-          <button>Enviar</button>
+
+      <div class="input-wrapper">
+        <label for="textarea">Description:</label>
+        <textarea name="textarea" id="textarea"></textarea>
+      </div>
+
+          <button > Send </button>
+
       </form>
     </div>
+  </div>
+
+  <footer>
+    
   </footer>
+
   </body>
 </html>
