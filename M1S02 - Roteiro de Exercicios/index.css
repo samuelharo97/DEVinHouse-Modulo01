@@ -20,7 +20,6 @@ body {
 }
 
 .page {
-  
   background-image: url(./images/event2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -134,6 +133,7 @@ main {
   justify-content: space-evenly;
   padding: 20px;
   color: white;
+  justify-items: center;
 }
 
 .other-acts-container img {
@@ -141,6 +141,12 @@ main {
   width: 200px;
   border-radius: 20px;
   border: solid 3px var(--main-color);
+  align-self: center;
+}
+
+.other-acts-container p,
+.other-acts-container time {
+  align-self: center;
 }
 
 .other-act-card:hover {
@@ -158,15 +164,67 @@ h3 {
 }
 
 /* --------------------------------        FORM       ------------------------------  */
+
+footer {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  background: rgb(232, 83, 5);
+  background: linear-gradient(
+    0deg,
+    rgba(232, 83, 5, 1) 6%,
+    rgba(148, 18, 10, 1) 44%,
+    rgba(0, 0, 0, 1) 96%
+  );
+}
+
 form {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-self: center;
   color: var(--main-color);
   width: 750px;
-  height: 1084px;
-  background-color: rgb(204, 119, 55);
+  height: 700px;
+  background: rgb(232, 83, 5);
+  background: linear-gradient(
+    0deg,
+    rgba(232, 83, 5, 1) 6%,
+    rgba(148, 18, 10, 1) 44%,
+    rgba(0, 0, 0, 1) 96%
+  );
 }
+
+form h4 {
+  font-size: 40px;
+  text-align: center;
+}
+
+form input {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background: hsla(240, 24%, 92%, 1);
+  padding-left: 10px;
+}
+
+.input-wrapper span {
+  font-size: 12px;
+  color: hsla(258, 14%, 77%, 0.5);
+}
+.input-wrapper span:hover {
+  font-size: 12px;
+  color: hsla(258, 14%, 77%, 1);
+}
+
 .personal-info {
   display: flex;
+  justify-content: space-evenly;
+}
+.personal-info input {
+  width: 100%;
 }
 
 /* --------------------------------        FOOTER       ------------------------------  */
