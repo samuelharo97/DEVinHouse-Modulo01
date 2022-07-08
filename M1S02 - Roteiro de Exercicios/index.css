@@ -111,7 +111,7 @@ main {
 .main-act img {
   position: relative;
   z-index: 0;
-  width: 40rem;
+  width: 50rem;
   align-self: center;
   border: 3px solid var(--main-color);
   margin: 25px;
@@ -166,6 +166,7 @@ h3 {
 .form {
   object-fit: contain;
   display: flex;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
   justify-content: center;
@@ -188,8 +189,8 @@ form {
   width: 42rem;
   height: fit-content;
   padding: 16px;
-  border: 5px solid var(--main-color);
-  border-radius: 3px;
+  
+  
   background: rgb(232, 83, 5);
   background: linear-gradient(
     0deg,
@@ -239,8 +240,8 @@ textarea {
   height: 90px;
 }
 
-button {
-  width: 40%;
+.form button {
+  width: 10%;
   margin: 0 auto;
   background-color: var(--main-color);
   height: 4rem;
@@ -253,6 +254,26 @@ button {
 }
 /* --------------------------------        FOOTER       ------------------------------  */
 
+footer {
+  height: 150px;
+  background: black;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer ul {
+  flex-direction: column;
+  gap: 1px;
+}
+
+footer ul,
+p {
+  color: white;
+}
+
+/* ---------------      DEVERIA TER FEITO MOBILE FIRST  / ME LASQUEI    -------------------  */
+
 @media (max-width: 1130px) {
   nav li {
     display: none;
@@ -263,6 +284,10 @@ button {
 }
 
 @media (max-width: 910px) {
+  body {
+    min-width: 800px;
+  }
+
   main img {
     text-align: center;
     height: 250px;
@@ -282,13 +307,22 @@ button {
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 768px) {
   .other-acts-container {
     flex-direction: column;
     align-items: center;
   }
 
   body {
-    min-width: 660px;
+    min-width: 800px;
   }
 }
+
+@media (max-width: 550px) {
+  h3 {
+    position: relative;
+    padding-bottom: 0;
+  }
+}
+
+/* ---------------      DEVERIA TER FEITO MOBILE FIRST  / ME LASQUEI    -------------------  */
