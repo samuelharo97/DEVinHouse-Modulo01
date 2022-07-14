@@ -23,10 +23,10 @@ var pessoaConvidada4 = {
   idade: 20
 }
 var pessoaConvidada5 = {
-  nome: 'Junior',
-  sobrenome: 'Albino',
+  nome: 'Samuel',
+  sobrenome: 'Haro',
   setor: 'Pista',
-  idade: 17
+  idade: 25
 }
 var pessoaConvidada6 = {
   nome: 'Fernanda',
@@ -79,4 +79,13 @@ var listaCamarote = separarCamarote()
 var listaPista = separarPista()
 var listaArquibancada = separarArquibancada()
 
+const ulCamarote = document.querySelector('.camarote')
+const ulArquibancada = document.querySelector('.arquibancada')
+const ulPista = document.querySelector('.pista')
 
+ulCamarote.innerHTML = `<li> ${listaCamarote[0].nome} ${listaCamarote[0].sobrenome} </li>`
+ulCamarote.innerHTML += `<li> ${listaCamarote[1].nome} ${listaCamarote[1].sobrenome} </li>`
+ulArquibancada.innerHTML = `<li> ${listaArquibancada[0].nome} ${listaArquibancada[0].sobrenome} </li>`
+ulArquibancada.innerHTML += `<li> ${listaArquibancada[1].nome} ${listaArquibancada[1].sobrenome} </li>`
+ulPista.innerHTML = `<li> ${listaPista[0].nome} ${listaPista[0].sobrenome} </li>`
+ulPista.innerHTML += `<li> ${listaPista[1].nome} ${listaPista[1].sobrenome} </li>`
