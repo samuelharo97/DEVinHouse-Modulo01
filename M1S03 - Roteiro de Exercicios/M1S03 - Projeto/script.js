@@ -83,9 +83,12 @@ const ulCamarote = document.querySelector('.camarote')
 const ulArquibancada = document.querySelector('.arquibancada')
 const ulPista = document.querySelector('.pista')
 
-ulCamarote.innerHTML = `<li> ${listaCamarote[0].nome} ${listaCamarote[0].sobrenome} </li>`
-ulCamarote.innerHTML += `<li> ${listaCamarote[1].nome} ${listaCamarote[1].sobrenome} </li>`
-ulArquibancada.innerHTML = `<li> ${listaArquibancada[0].nome} ${listaArquibancada[0].sobrenome} </li>`
-ulArquibancada.innerHTML += `<li> ${listaArquibancada[1].nome} ${listaArquibancada[1].sobrenome} </li>`
-ulPista.innerHTML = `<li> ${listaPista[0].nome} ${listaPista[0].sobrenome} </li>`
-ulPista.innerHTML += `<li> ${listaPista[1].nome} ${listaPista[1].sobrenome} </li>`
+function addToList(array, ulList) {
+  array.forEach((n, i) => {
+    ulList.innerHTML += `<li> ${array[i].nome} ${array[i].sobrenome} </li>`
+  })
+}
+
+addToList(listaCamarote, ulCamarote)
+addToList(listaPista, ulPista)
+addToList(listaArquibancada, ulArquibancada)
