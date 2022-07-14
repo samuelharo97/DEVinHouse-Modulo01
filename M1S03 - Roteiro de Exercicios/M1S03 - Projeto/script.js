@@ -85,7 +85,11 @@ const ulPista = document.querySelector('.pista')
 
 function addToList(array, ulList) {
   array.forEach((n, i) => {
-    ulList.innerHTML += `<li> ${array[i].nome} ${array[i].sobrenome} </li>`
+    if (array[i].openBar === true) {
+    ulList.innerHTML += `<li> ${array[i].nome} ${array[i].sobrenome} 🍹 </li>`
+    }else{
+    ulList.innerHTML += `<li> ${array[i].nome} ${array[i].sobrenome}</li>`
+    }
   })
 }
 
