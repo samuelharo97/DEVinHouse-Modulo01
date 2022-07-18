@@ -20,7 +20,7 @@ var pessoaConvidada4 = {
   nome: 'Gabrielly',
   sobrenome: 'Pontes',
   setor: 'Pista',
-  idade: 20
+  idade: 15
 }
 var pessoaConvidada5 = {
   nome: 'Samuel',
@@ -86,9 +86,9 @@ const ulPista = document.querySelector('.pista')
 function addToList(array, ulList) {
   array.forEach((n, i) => {
     if (array[i].openBar === true) {
-    ulList.innerHTML += `<li> ${array[i].nome} ${array[i].sobrenome} 🍹 </li>`
-    }else{
-    ulList.innerHTML += `<li> ${array[i].nome} ${array[i].sobrenome}</li>`
+      ulList.innerHTML += `<li> ${array[i].nome} ${array[i].sobrenome} 🍹 </li>`
+    } else {
+      ulList.innerHTML += `<li> ${array[i].nome} ${array[i].sobrenome}</li>`
     }
   })
 }
