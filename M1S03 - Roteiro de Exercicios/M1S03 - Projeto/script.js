@@ -92,7 +92,7 @@ function addToList(array, ulList) {
     }
   })
 }
-
+//
 addToList(listaCamarote, ulCamarote)
 addToList(listaPista, ulPista)
 addToList(listaArquibancada, ulArquibancada)
