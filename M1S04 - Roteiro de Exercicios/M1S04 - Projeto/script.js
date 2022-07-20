@@ -24,7 +24,7 @@ function addAccount() {
   })
 }
 
-function withdrawFrom(value, idDaConta) {
+function withdrawMoney(value, idDaConta) {
   let selectedAccount = contasClientes.find(
     conta => conta.id === idDaConta
   ).saldo
@@ -35,5 +35,19 @@ function withdrawFrom(value, idDaConta) {
     selectedAccount -= value
     contasClientes[idDaConta - 1].saldo = selectedAccount
     alert(`Saque concluído. Saldo atual: R$ ${selectedAccount}`)
+  }
+}
+
+function depositMoney(value, idDaConta) {
+  let selectedAccount = contasClientes.find(
+    conta => conta.id === idDaConta
+  ).saldo
+
+  if (value <= 0) {
+    alert('Valor inválido.')
+  } else {
+    selectedAccount += value
+    contasClientes[idDaConta - 1].saldo = selectedAccount
+    alert(`Depósito concluído. Saldo atual: R$ ${selectedAccount}`)
   }
 }
