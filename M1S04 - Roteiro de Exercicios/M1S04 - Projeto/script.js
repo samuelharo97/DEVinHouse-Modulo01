@@ -20,6 +20,20 @@ const contasClientes = [
 
 function addAccount() {
   contasClientes.forEach((n, i) => {
-    accounts.innerHTML +=  `<option> ${contasClientes[i].nome} </option>`
+    accounts.innerHTML += `<option class="conta${i}"> ${contasClientes[i].nome} </option>`
   })
+}
+
+function withdrawFrom(value, idDaConta) {
+  let selectedAccount = contasClientes.find(
+    conta => conta.id === idDaConta
+  ).saldo
+
+  if (value > selectedAccount) {
+    alert('Valor inválido.')
+  } else {
+    selectedAccount -= value
+    contasClientes[idDaConta - 1].saldo = selectedAccount
+    alert(`Saque concluído. Saldo atual: R$ ${selectedAccount}`)
+  }
 }
