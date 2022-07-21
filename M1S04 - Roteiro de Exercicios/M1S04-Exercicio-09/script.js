@@ -14,6 +14,4 @@ function age(num) {
   return resultado
 }
 
-button.addEventListener('click', function () {
-  result.textContent = age(num)
-})
+button.addEventListener('click', () => (result.textContent = age(num)))
