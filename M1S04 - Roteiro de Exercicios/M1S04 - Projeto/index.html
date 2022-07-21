@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
     <title>Projeto - Conta Bancária</title>
   </head>
-  <body onload="addAccount()">
-    <select name="account" id="account"></select>
-    <input type="text" placeholder="Valor" />
+  <body>
+    <select name="account" id="account">
+    </select>
+    <input type="text" placeholder="Valor" id="amount" />
     <select name="options" id="options">
       <option value="withdraw">Sacar</option>
       <option value="deposit">Depositar</option>
     </select>
-    <button class="send">Confirmar</button>
+    <button id="send">Confirmar</button>
   </body>
+  <script src="script.js"></script>
 </html>
