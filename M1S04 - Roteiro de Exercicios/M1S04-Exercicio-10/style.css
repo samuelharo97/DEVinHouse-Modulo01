@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
 body {
   background: rgb(24, 110, 176);
   background: radial-gradient(
@@ -22,7 +28,7 @@ body {
 main {
   margin-top: 5%;
   margin-left: 25%;
-  height: 80vh;
+  height: 65vh;
   width: 50vw;
   border-radius: 80px;
   text-align: center;
