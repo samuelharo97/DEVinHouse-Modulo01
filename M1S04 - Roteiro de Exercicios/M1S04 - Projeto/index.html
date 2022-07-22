@@ -8,20 +8,26 @@
     <title>Projeto - Conta Bancária</title>
   </head>
   <body>
-    <label for="account">Conta:</label>
-    <select name="account" id="account">
-      <option value="">Selecione a Conta</option>
-    </select>
-    <div class="input-wrapper">
-      <label for="password">Senha:</label>
-      <input type="password" id="password" required />
-    </div>
-    <input type="text" placeholder="Valor" id="amount" required />
-    <select name="options" id="options">
-      <option value="withdraw">Sacar</option>
-      <option value="deposit">Depositar</option>
-    </select>
-    <button id="send">Confirmar</button>
+    <main>
+      <div class="login">
+        <label for="account">Conta:</label>
+        <select name="account" id="account">
+          <option value="">Selecione a Conta</option>
+        </select>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" required />
+      </div>
+      <div class="input-wrapper">
+        <select name="options" id="options">
+          <option value="withdraw">Sacar</option>
+          <option value="deposit">Depositar</option>
+        </select>
+        <label for="amount">Valor:</label>
+        <input type="text" placeholder="Valor" id="amount" required />
+      </div>
+      <button id="send">Confirmar</button>
+    </main>
   </body>
   <script src="script.js"></script>
 </html>
