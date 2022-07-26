@@ -15,4 +15,10 @@ class Pedido {
     this.listaProdutos = []
     this.nomeCliente = nomeCliente
   }
+
+  adicionarProduto(produto) {
+    if (produto.instanceof(Produto)) {
+      this.listaProdutos.push(produto)
+    }
+  }
 }
