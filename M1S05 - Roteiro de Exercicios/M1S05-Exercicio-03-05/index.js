@@ -16,9 +16,11 @@ class Pedido {
     this.nomeCliente = nomeCliente
   }
 
-  adicionarProduto(produto) {
-    if (produto.instanceof(Produto)) {
-      this.listaProdutos.push(produto)
+  adicionarProduto(pedido) {
+    if (pedido instanceof Produto) {
+      this.listaProdutos.push(pedido)
     }
   }
+
+  
 }
