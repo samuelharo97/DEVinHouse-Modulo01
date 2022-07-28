@@ -23,13 +23,13 @@ class Pedido {
   }
 
   calcularTotal() {
-    for (let i = 0; i < this.listaProdutos.length, i++; ) {
-      let total = 0
-      const price = this.listaProdutos[i].pedido.preco
-      const quantity = this.listaProdutos[i].pedido.quantidade
-      total = price * quantity
-      this.listaProdutos[i].push(total)
+    let total = 0
+    for (let i = 0; i < this.listaProdutos.length; i++) {
+      const price = this.listaProdutos[i].preco
+      const quantity = this.listaProdutos[i].quantidade
+      total += price * quantity
     }
+    return total
   }
 }
 
@@ -48,5 +48,4 @@ pedido1.adicionarProduto(produto5)
 
 pedido2.adicionarProduto(produto2)
 pedido2.adicionarProduto(produto3)
-
-
+console.log(pedido2.calcularTotal())

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+body {
+  margin: 90px;
+}
+
+.order-container {
+  height: 400px;
+  width: 100%;
+  border: 1px solid grey;
+  padding: 2%;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+p,
+ul {
+  font-weight: 700;
+}
