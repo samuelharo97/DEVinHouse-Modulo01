@@ -14,14 +14,14 @@ body {
   margin: 90px;
 }
 
-.order-container {
+.app {
   height: 400px;
   width: 100%;
   border: 1px solid grey;
   padding: 2%;
 }
 
-.details-container {
+.details-card {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -36,4 +36,20 @@ body {
 p,
 ul {
   font-weight: 700;
+}
+
+span {
+  font-weight: 400;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+li:nth-child(1) {
+  margin-top: 10px;
+}
+
+li {
+  font-weight: 400;
 }
