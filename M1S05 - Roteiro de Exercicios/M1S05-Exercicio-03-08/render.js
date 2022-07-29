@@ -79,7 +79,7 @@ export function render(pedido, cardNumber) {
     details.appendChild(payment)
     payment.classList.add(`paymentStatus${cardNumber}`)
 
-    app.appendChild(ul)
+    app.appendChild(ul).textContent = 'Produtos:'
     ul.classList.add(`productsList${cardNumber}`)
   }
   return {
