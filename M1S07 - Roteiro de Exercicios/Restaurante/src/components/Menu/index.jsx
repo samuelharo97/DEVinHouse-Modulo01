@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-
+ 
 
 export const Menu = () => {
   return(
-    <div>
+    <ul>
       
-    </div>
+    </ul>
   )
 }

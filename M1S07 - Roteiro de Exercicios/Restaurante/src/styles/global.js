@@ -7,8 +7,18 @@ export default createGlobalStyle`
     font-family: 'Roboto Slab', serif;
   }
 
-  body { background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-  color: ${({ theme }) => theme.COLORS.WHITE};
+  #root{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  body { 
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    color: ${({ theme }) => theme.COLORS.WHITE};
+
   } 
 
 
