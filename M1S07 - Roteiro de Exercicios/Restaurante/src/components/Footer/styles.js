@@ -8,6 +8,8 @@ export const Container = styled.footer`
   justify-content: space-evenly;
   align-items: center;
   padding: 0 50px;
+  bottom: 0;
+  margin-top: auto;
   /* 
   img {
     width: 100px;
@@ -23,8 +25,7 @@ export const Container = styled.footer`
     font-weight: 700;
   }
  */
-  div {
-    display: flex;
+  footer {
     align-items: center;
   }
 

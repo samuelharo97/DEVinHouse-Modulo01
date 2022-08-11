@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 50px;
+  padding: 0 40px;
 
   img {
     width: 100px;
@@ -15,11 +15,12 @@ export const Container = styled.div`
 
   h1 {
     color: ${({ theme }) => theme.COLORS.ORANGE};
+    font-size: 1.5rem;
   }
 
   > a {
     color: ${({ theme }) => theme.COLORS.ORANGE};
-    font-size: 25px;
+    font-size: 1rem;
     font-weight: 700;
   }
 

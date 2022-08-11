@@ -7,6 +7,10 @@ export default createGlobalStyle`
     font-family: 'Roboto Slab', serif;
   }
 
+  :root {
+    font-size: 62,5%;
+  }
+
   #root{
     min-height: 100vh;
     height: 100%;
