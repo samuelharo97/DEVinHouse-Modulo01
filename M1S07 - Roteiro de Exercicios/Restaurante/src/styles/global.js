@@ -17,11 +17,14 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    
   }
 
   body { 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.WHITE}; 
 
   } 
 
