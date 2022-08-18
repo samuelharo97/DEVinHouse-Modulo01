@@ -17,4 +17,8 @@ export const CardLayout = styled.div`
     height: 200px;
     border-radius: 20px 20px 0 0;
   }
+
+  > .isRed {
+    background-color: red;
+  }
 `
