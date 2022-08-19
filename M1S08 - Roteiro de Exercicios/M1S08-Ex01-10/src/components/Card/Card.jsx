@@ -1,39 +1,39 @@
 import PropTypes from 'prop-types'
-import { CardLayout, CardLayout2 } from './styles'
-import { useState } from 'react'
 
-export const Cards = ({ data, selected = false, onSelecionar }) => {
-  /*   const [selected, setSelected] = useState(false)
-   */
-  function onSelecionar() {
-    console.log(selected)
-    return (selected = !selected)
-  }
+import styles from './Card.module.css'
 
-  return (
-    <CardLayout onClick={() => onSelecionar()}>
-      <img src={data.url} />
-      <h3>{data.name}</h3>
-      <strong>{data.description}</strong>
-      <span className={selected ? 'isSelected' : ''}>
-        {data.price.toLocaleString('pt-BR', {
-          style: 'currency',
-          currency: 'BRL'
-        })}
-      </span>
-      <span>{data.prepTime}</span>
-    </CardLayout>
-  )
+export const Card = ({ produto }) => (
+  <div className={styles.card}>
+    <img
+      className={styles.img}
+      alt="Foto do prato"
+      src={produto.img}
+      height={200}
+    />
+
+    <div className={styles.info}>
+      <h2 className={styles.infoTitulo}>{produto.nome}</h2>
+
+      <p className={styles.infoDescricao}>{produto.descricao}</p>
+    </div>
+
+    <div className={styles.footer}>
+      <strong className={styles.footerValor}>
+        {`R$ ${produto.valor.toFixed(2).replace('.', `,`)}`}
+      </strong>
+
+      <p>{produto.tempoPreparo}</p>
+    </div>
+  </div>
+)
+
+Card.propTypes = {
+  produto: PropTypes.shape({
+    img: PropTypes.string.isRequired,
+    nome: PropTypes.string.isRequired,
+    descricao: PropTypes.string.isRequired,
+    valor: PropTypes.number.isRequired,
+    tempoPreparo: PropTypes.string.isRequired
+  })
 }
 
-Cards.propTypes = {
-  data: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    description: PropTypes.string.isRequired,
-    prepTime: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
-  }),
-  selected: PropTypes.bool,
-  onSelecionar: PropTypes.func
-}

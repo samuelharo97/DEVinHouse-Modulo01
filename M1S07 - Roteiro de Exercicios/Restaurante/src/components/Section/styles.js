@@ -5,9 +5,5 @@ export const Container = styled.section`
   flex-direction: column;
   gap: 15px;
   padding: 20px 80px;
-
-  > .card-container {
-    display: flex;
-    gap: 30px;
-  }
+  margin-bottom: 70px;
 `

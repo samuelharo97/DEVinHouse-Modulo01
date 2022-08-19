@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-
+import { Title } from './styles'
 import { CardsList } from '../CardsList'
 
 export const SubSection = ({ data, subSection }) => {
@@ -7,7 +7,7 @@ export const SubSection = ({ data, subSection }) => {
 
   return (
     <div>
-      <h3>{subSection}</h3>
+      <Title>{subSection}</Title>
 
       <CardsList data={filteredData} />
     </div>
