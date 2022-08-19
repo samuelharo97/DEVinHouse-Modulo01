@@ -1,25 +1,21 @@
 import PropTypes from 'prop-types'
-import { CardLayout } from './styles'
+import { CardLayout, CardLayout2 } from './styles'
 import { useState } from 'react'
 
-export const Cards = ({ data }) => {
-  const [selecionado, setSelecionado] = useState(false)
-
+export const Cards = ({ data, selected = false, onSelecionar }) => {
+  /*   const [selected, setSelected] = useState(false)
+   */
   function onSelecionar() {
-    return setSelecionado(!selecionado)
+    console.log(selected)
+    return (selected = !selected)
   }
 
   return (
-    <CardLayout
-      onClick={() => {
-        onSelecionar()
-      }}
-    >
+    <CardLayout onClick={() => onSelecionar()}>
       <img src={data.url} />
       <h3>{data.name}</h3>
       <strong>{data.description}</strong>
-
-      <span className={selecionado ? 'isRed' : ''}>
+      <span className={selected ? 'isSelected' : ''}>
         {data.price.toLocaleString('pt-BR', {
           style: 'currency',
           currency: 'BRL'
@@ -38,6 +34,6 @@ Cards.propTypes = {
     prepTime: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
   }),
-  selecionado: PropTypes.bool,
+  selected: PropTypes.bool,
   onSelecionar: PropTypes.func
 }
