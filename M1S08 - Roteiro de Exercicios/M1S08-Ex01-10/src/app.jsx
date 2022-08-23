@@ -5,7 +5,7 @@ import styles from './App.module.css'
 function App() {
   const subSecoesEntradas = new Set(produtos.entradas.map(p => p.subSecao))
   const subSecoesPrincipais = new Set(produtos.principais.map(p => p.subSecao))
-  let secoes = [
+  const secoes = [
     {
       nome: 'Entradas',
       itens: produtos.entradas,
