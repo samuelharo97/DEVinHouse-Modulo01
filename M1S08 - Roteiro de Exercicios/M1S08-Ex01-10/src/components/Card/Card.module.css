@@ -6,6 +6,9 @@
   border-radius: 20px;
   width: 100%;
 }
+.cardSelected {
+  background-color: #3d442c;
+}
 
 .img {
   border-radius: 20px 20px 0 0;

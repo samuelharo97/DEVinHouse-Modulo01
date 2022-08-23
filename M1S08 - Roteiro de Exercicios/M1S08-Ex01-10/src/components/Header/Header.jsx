@@ -1,21 +1,22 @@
-import logo from '@assets/images/logo.jpeg';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import logo from '@assets/images/logo.jpeg'
 
-import styles from './Header.module.css';
+import styles from './Header.module.css'
 export const Header = () => (
   <header className={styles.header}>
     <div className={styles.titleContainer}>
-      <img src={logo} alt='Logo do restaurante' height={50} />
+      <img src={logo} alt="Logo do restaurante" height={50} />
       <h1 className={styles.title}>Green Food</h1>
     </div>
 
     <nav>
       <ul className={styles.ul}>
         <li>
-          <a className={styles.link} href='#'>
+          <a className={styles.link} href="#">
             Menu
           </a>
         </li>
       </ul>
     </nav>
   </header>
-);
+)
