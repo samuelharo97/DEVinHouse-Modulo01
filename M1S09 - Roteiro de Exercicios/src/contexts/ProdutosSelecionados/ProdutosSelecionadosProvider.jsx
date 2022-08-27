@@ -6,9 +6,8 @@ import { ProdutosSelecionadosContext } from './ProdutosSelecionadosContext'
 
 const ProdutosSelecionadosProvider = ({ children }) => {
   const [produtosSelecionados, setProdutosSelecionados] = useState([])
-
   const isSelecionado = id => {
-    return produtosSelecionados.some(item => item === id)
+    return produtosSelecionados.some(item => item.id === id)
   }
 
   const handleSelecionar = produto => {
