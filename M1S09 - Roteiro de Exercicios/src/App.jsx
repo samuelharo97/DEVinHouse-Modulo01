@@ -1,6 +1,5 @@
 import { Footer, Header } from '@components'
 import { ProdutosSelecionadosProvider } from '@contexts'
-import { Menu } from '@pages'
 import styles from './App.module.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from '@router'
