@@ -22,7 +22,12 @@ const ProdutosSelecionadosProvider = ({ children }) => {
 
   return (
     <ProdutosSelecionadosContext.Provider
-      value={{ produtosSelecionados, isSelecionado, handleSelecionar }}
+      value={{
+        produtosSelecionados,
+        setProdutosSelecionados,
+        isSelecionado,
+        handleSelecionar
+      }}
     >
       {children}
     </ProdutosSelecionadosContext.Provider>
