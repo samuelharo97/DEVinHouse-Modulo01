@@ -8,7 +8,7 @@ import path from 'path'
 export default defineConfig({
   resolve: {
     alias: {
-      '@components': path.resolve(__dirname, './src/components/index.jsx'),
+      '@components': path.resolve(__dirname, './src/components/index.js'),
       '@pages': path.resolve(__dirname, './src/pages/index.js')
     }
   },

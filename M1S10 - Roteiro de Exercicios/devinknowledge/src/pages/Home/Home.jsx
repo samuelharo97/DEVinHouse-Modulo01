@@ -1,4 +1,4 @@
-import { MainContent, Sidebar } from '../../components'
+import { Sidebar, MainContent } from '@components'
 
 export const Home = () => {
   return (
