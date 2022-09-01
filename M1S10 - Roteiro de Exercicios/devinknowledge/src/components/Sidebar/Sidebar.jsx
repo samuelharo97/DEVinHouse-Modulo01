@@ -3,7 +3,7 @@ export const Sidebar = () => {
     <aside>
       <form id="form">
         <header>
-          <img src="/src/assets/booklogo.png" alt="logo da devinknowledge" />
+          <img src="/assets/images/booklogo.png" alt="logo da devinknowledge" />
           <div className="logo">
             <h1>
               DEVin<span>Knowledge</span>
@@ -37,8 +37,8 @@ export const Sidebar = () => {
         </div>
         <div className="input-wrapper">
           <label htmlFor="category">Categoria*</label>
-          <select name="category" id="category" required>
-            <option value="none" disabled selected>
+          <select name="category" id="category" defaultValue={'none'} required>
+            <option value="none" disabled>
               Selecione uma categoria
             </option>
             <option value="Front-End">Front-End</option>

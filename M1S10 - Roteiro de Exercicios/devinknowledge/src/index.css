@@ -28,10 +28,13 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 .body {
   display: flex;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 header {
@@ -268,20 +271,23 @@ nav button h3 {
   height: 70vh;
   display: flex;
   flex-direction: column;
+}
+
+main {
   overflow: hidden;
   overflow-y: scroll;
 }
 
-.cards-container::-webkit-scrollbar {
+main::-webkit-scrollbar {
   width: 8px;
 }
 
-.cards-container::-webkit-scrollbar-track {
+main::-webkit-scrollbar-track {
   background: hsl(0, 0%, 85%);
   border-radius: 64px;
 }
 
-.cards-container::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 64px;
 }
@@ -301,6 +307,7 @@ nav button h3 {
   margin: 20px;
   padding: 16px;
   background-color: #f8f7f9;
+  color: #2b2d42;
 }
 
 .card-buttons {
