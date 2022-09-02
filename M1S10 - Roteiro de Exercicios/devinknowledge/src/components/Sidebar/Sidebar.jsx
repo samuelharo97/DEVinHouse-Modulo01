@@ -1,7 +1,21 @@
+import /* Form */ '@components'
+import { useForm } from 'react-hook-form'
+
+const validationObject = {
+  required: true
+}
+const notRequired = {
+  required: false
+}
+
 export const Sidebar = () => {
+  const { register, handleSubmit, reset } = useForm()
+  const handleCreateTip = data => {
+    console.log(data)
+  }
   return (
     <aside>
-      <form id="form">
+      <form onSubmit={handleSubmit(handleCreateTip)}>
         <header>
           <img src="/assets/images/booklogo.png" alt="logo da devinknowledge" />
           <div className="logo">
@@ -14,30 +28,31 @@ export const Sidebar = () => {
         <div className="input-wrapper">
           <label htmlFor="title">Título*</label>
           <input
+            {...register('title', validationObject)}
             type="text"
             name="title"
             id="title"
             placeholder="Digite um título"
-            required
-            minLength="8"
-            maxLength="64"
           />
         </div>
         <div className="input-wrapper">
           <label htmlFor="skill">Linguagem/Skill*</label>
           <input
+            {...register('skill', validationObject)}
             type="text"
             name="skill"
             id="skill"
             placeholder="Digite uma linguagem ou skill"
-            required
-            minLength="4"
-            maxLength="16"
           />
         </div>
         <div className="input-wrapper">
           <label htmlFor="category">Categoria*</label>
-          <select name="category" id="category" defaultValue={'none'} required>
+          <select
+            {...register('category', validationObject)}
+            name="category"
+            id="category"
+            defaultValue={'none'}
+          >
             <option value="none" disabled>
               Selecione uma categoria
             </option>
@@ -51,28 +66,31 @@ export const Sidebar = () => {
         <div className="input-wrapper">
           <label htmlFor="description">Descrição*</label>
           <textarea
+            {...register('description', validationObject)}
             name="description"
             id="description"
             placeholder="Escreva aqui o detalhamento da sua dica..."
-            minLength="32"
-            maxLength="512"
-            required
           ></textarea>
         </div>
         <div className="input-wrapper">
           <label htmlFor="video">Link para video no YouTube:</label>
-          <input type="url" name="video" id="video" />
+          <input
+            {...register('video', notRequired)}
+            type="url"
+            name="video"
+            id="video"
+          />
         </div>
         <div className="button-wrapper">
-          <button id="clear" type="reset">
+          <button id="clear" onClick={() => reset()}>
             Limpar
           </button>
-          <button id="save" type="submit">
+          <button id="save" onClick={handleSubmit}>
             Salvar
           </button>
-          <button id="saveEdit" type="submit" className="hidden">
+          {/* <button id="saveEdit" type="submit" className="hidden">
             Finalizar Edição
-          </button>
+          </button> */}
         </div>
       </form>
     </aside>
