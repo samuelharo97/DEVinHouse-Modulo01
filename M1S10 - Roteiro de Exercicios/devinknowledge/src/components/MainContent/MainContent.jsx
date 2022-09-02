@@ -1,6 +1,10 @@
 import { CardList, Filter, Summary, TipCard } from '@components'
+import { useAppContext } from '@context'
 
 export const MainContent = () => {
+  const result = useAppContext()
+  console.log(result)
+
   return (
     <section className="right-side">
       <Summary />

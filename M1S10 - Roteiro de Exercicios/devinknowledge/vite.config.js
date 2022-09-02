@@ -9,7 +9,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, './src/components/index.js'),
-      '@pages': path.resolve(__dirname, './src/pages/index.js')
+      '@pages': path.resolve(__dirname, './src/pages/index.js'),
+      '@context': path.resolve(__dirname, './src/context/index.js')
     }
   },
   plugins: [react(), eslint()]
