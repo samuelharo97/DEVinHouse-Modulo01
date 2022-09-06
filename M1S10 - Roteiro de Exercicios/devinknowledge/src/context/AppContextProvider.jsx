@@ -16,12 +16,22 @@ export const AppContextProvider = ({ children }) => {
     }
   }
 
+  const sortByCategory = () => {
+    const categories = Array.from(new Set(allTips.map(tip => tip.category)))
+    return categories.map(catName => {
+      const count = allTips.filter(tip => tip.category === catName).length
+      return { title: catName, count }
+    })
+  }
+
+  const categories = sortByCategory()
+
   const tips = filter
-    ? allTips.filter(tip => tip.titulo.includes(filter))
+    ? allTips.filter(tip => tip.title.includes(filter))
     : allTips
 
   return (
-    <AppContext.Provider value={{ createTip, filterTip, tips }}>
+    <AppContext.Provider value={{ createTip, filterTip, tips, categories }}>
       {children}
     </AppContext.Provider>
   )

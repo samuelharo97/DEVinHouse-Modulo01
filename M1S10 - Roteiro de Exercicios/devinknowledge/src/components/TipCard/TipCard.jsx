@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 
-export const TipCard = ({ title, category, language, description, video }) => {
+export const TipCard = ({ dica }) => {
   return (
     <li className="cards-container">
       <div className="card">
-        <h2 className="cardTitle">{title}</h2>
-        <h4 className="cardSkill">Linguagem/Skill: {language}</h4>
-        <h4 className="cardCategory">Categoria: {category}</h4>
-        <p className="cardContent">{description}</p>
+        <h2 className="cardTitle">{dica.title}</h2>
+        <h4 className="cardSkill">Linguagem/Skill: {dica.language}</h4>
+        <h4 className="cardCategory">Categoria: {dica.category}</h4>
+        <p className="cardContent">{dica.description}</p>
         <div className="card-buttons">
           <button className="cardDelete">
             <img
@@ -25,7 +25,7 @@ export const TipCard = ({ title, category, language, description, video }) => {
           </button>
 
           <button /* {dica.hasYoutube} */ className="videoCard ">
-            <a href={video} rel="noreferrer" target="_blank">
+            <a href={dica.video} rel="noreferrer" target="_blank">
               <img
                 src="/assets/images/video-card.png"
                 alt="video sobre a dica"
@@ -47,11 +47,11 @@ export const TipCard = ({ title, category, language, description, video }) => {
 }
 
 TipCard.propTypes = {
-  /* dica: PropTypes.shape({ */
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  language: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired
-  /*   }) */
+  dica: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    language: PropTypes.string.isRequired,
+    video: PropTypes.string.isRequired
+  })
 }

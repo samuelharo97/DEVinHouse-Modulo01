@@ -1,4 +1,5 @@
 import /* Form */ '@components'
+import { useAppContext } from '@context'
 import { useForm } from 'react-hook-form'
 
 const validationObject = {
@@ -10,8 +11,10 @@ const notRequired = {
 
 export const Sidebar = () => {
   const { register, handleSubmit, reset } = useForm()
+  const { createTip } = useAppContext()
   const handleCreateTip = data => {
     console.log(data)
+    createTip(data)
   }
   return (
     <aside>
@@ -38,10 +41,10 @@ export const Sidebar = () => {
         <div className="input-wrapper">
           <label htmlFor="skill">Linguagem/Skill*</label>
           <input
-            {...register('skill', validationObject)}
+            {...register('language', validationObject)}
             type="text"
-            name="skill"
-            id="skill"
+            name="language"
+            id="language"
             placeholder="Digite uma linguagem ou skill"
           />
         </div>

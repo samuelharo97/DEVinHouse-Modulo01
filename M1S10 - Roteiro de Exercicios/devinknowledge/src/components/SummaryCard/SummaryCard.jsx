@@ -10,6 +10,8 @@ export const SummaryCard = ({ title, count }) => {
 }
 
 SummaryCard.propTypes = {
+  /* category: PropTypes.shape({ */
   title: PropTypes.string.isRequired,
   count: PropTypes.number.isRequired
+  /*  }) */
 }

@@ -1,4 +1,8 @@
+import { useAppContext } from '@context'
+
 export const Filter = () => {
+  const { filterTip } = useAppContext()
+
   return (
     <div className="search-wrapper">
       <input
@@ -6,13 +10,10 @@ export const Filter = () => {
         name="search"
         id="searchInput"
         placeholder="Digite um título para buscar.."
+        onChange={e => filterTip(e.target.value)}
       />
-      <button /* onClick={handleOnEnterFilter} */ className="searchButton">
-        Buscar
-      </button>
-      <button /* onClick={handleOnClearFilter} */ className="searchButton">
-        Limpar
-      </button>
+      <button className="searchButton">Buscar</button>
+      <button className="searchButton">Limpar</button>
     </div>
   )
 }

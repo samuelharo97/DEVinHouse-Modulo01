@@ -1,13 +1,20 @@
 import { SummaryCard } from '@components'
+import { useAppContext } from '@context'
 
 export const Summary = () => {
+  // eslint-disable-next-line no-unused-vars
+  const { categories } = useAppContext()
   return (
     <nav>
-      <SummaryCard title="Total" count={20} />
-      <SummaryCard title="FrontEnd" count={5} />
-      <SummaryCard title="BackEnd" count={5} />
-      <SummaryCard title="FullStack" count={7} />
-      <SummaryCard title="SoftSkill" count={3} />
+      {categories.map((category, index) => {
+        return (
+          <SummaryCard
+            key={index}
+            title={category.title}
+            count={category.count}
+          />
+        )
+      })}
     </nav>
   )
 }
