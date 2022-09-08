@@ -1,6 +1,6 @@
 import { AppContextProvider } from '@context'
 import './App.css'
-import { Home } from './pages'
+import { Home } from '@pages'
 function App() {
   return (
     <AppContextProvider>

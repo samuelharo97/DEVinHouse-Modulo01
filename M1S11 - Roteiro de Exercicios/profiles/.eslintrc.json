@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "env": {
     "browser": true,
     "es2021": true,
@@ -18,10 +23,5 @@
     "sourceType": "module"
   },
   "plugins": ["react", "jsx-a11y"],
-  "rules": { "prefer-const": "warn" },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
+  "rules": {}
 }
