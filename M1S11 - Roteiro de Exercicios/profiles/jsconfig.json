@@ -4,7 +4,9 @@
     "paths": {
       /* "@components": ["./components/index.js"], */
       "@styles": ["./styles/index.js"],
-      "@context": ["./context/index.js"]
+      "@components": ["./components/index.js"],
+      "@context": ["./context/index.js"],
+      "@layout": ["./layout/index.js"]
     }
   },
   "include": ["src"]
