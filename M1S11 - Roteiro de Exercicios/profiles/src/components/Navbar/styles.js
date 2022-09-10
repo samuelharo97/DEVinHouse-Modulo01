@@ -1,4 +1,3 @@
-import { themes } from '@styles'
 import styled from 'styled-components'
 
 export const Container = styled.header`
@@ -8,13 +7,7 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  background-color: ${({ variant }) => {
-    if (variant === 'dark') {
-      return themes.COLORS.DARK_BACKGROUND
-    } else {
-      return themes.COLORS.LIGHT_BACKGROUND
-    }
-  }};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
 
   > img {
     width: 100px;

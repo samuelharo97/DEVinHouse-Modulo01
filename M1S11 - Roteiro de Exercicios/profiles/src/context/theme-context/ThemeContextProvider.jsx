@@ -1,29 +1,31 @@
 import { ThemeContext } from './theme-context'
 import PropTypes from 'prop-types'
-
-import { useState, useEffect } from 'react'
+import { darkTheme, lightTheme } from '@styles'
+import { useState /* useEffect */ } from 'react'
 
 export const ThemeContextProvider = ({ children }) => {
-  const [tema, setTema] = useState('darkTheme')
+  const [dark, setDark] = useState(true)
 
   const switchTheme = () => {
-    if (tema === 'dark') {
-      localStorage.setItem('@Profiles: Theme', JSON.stringify('light'))
-      return setTema('light')
+    if (dark) {
+      localStorage.setItem('@Profiles: Theme', JSON.stringify(!dark))
+      return setDark(!dark)
     } else {
-      localStorage.setItem('@Profiles: Theme', JSON.stringify('dark'))
-      return setTema('dark')
+      localStorage.setItem('@Profiles: Theme', JSON.stringify(dark))
+      return setDark(!dark)
     }
   }
 
-  useEffect(() => {
+  /*  useEffect(() => {
     return () => {
-      setTema(JSON.parse(localStorage.getItem('@Profiles: Theme')) || null)
+      setDark(JSON.parse(localStorage.getItem('@Profiles: Theme')) || null)
     }
-  }, [])
+  }, []) */
 
   return (
-    <ThemeContext.Provider value={{ tema, setTema, switchTheme }}>
+    <ThemeContext.Provider
+      value={{ theme: dark ? darkTheme : lightTheme, switchTheme }}
+    >
       {children}
     </ThemeContext.Provider>
   )

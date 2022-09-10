@@ -1,13 +1,17 @@
-export const themes = {
+export const lightTheme = {
   COLORS: {
-    LIGHT_BACKGROUND: '#CBF7ED',
-    LIGHT_HEADER_BG: '#406E8E',
-    LIGHT_PRIMARY: '#23395B',
-    LIGHT_SECONDARY: '#8EA8C3',
+    BACKGROUND: '#CBF7ED',
+    HEADER_BG: '#406E8E',
+    PRIMARY: '#23395B',
+    SECONDARY: '#8EA8C3'
+  }
+}
 
-    DARK_BACKGROUND: '#1A181B',
-    DARK_HEADER_BG: '#000000',
-    DARK_PRIMARY: '#706C61',
-    DARK_SECONDARY: '#66666E'
+export const darkTheme = {
+  COLORS: {
+    BACKGROUND: '#1A181B',
+    HEADER_BG: '#000000',
+    PRIMARY: '#706C61',
+    SECONDARY: '#66666E'
   }
 }

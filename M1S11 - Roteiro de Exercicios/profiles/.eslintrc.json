@@ -23,5 +23,5 @@
     "sourceType": "module"
   },
   "plugins": ["react", "jsx-a11y"],
-  "rules": {}
+  "rules": { "no-unused-vars": "warn" }
 }
