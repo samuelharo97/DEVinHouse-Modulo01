@@ -7,14 +7,15 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
-
+  background-color: ${({ theme }) => theme.COLORS.HEADER_BG};
+  grid-area: header;
   > img {
     width: 100px;
     height: 100px;
   }
-  > h1 {
+  h1 {
     text-align: center;
+    color: ${({ theme }) => theme.COLORS.TEXT};
   }
   > button {
     height: 50px;

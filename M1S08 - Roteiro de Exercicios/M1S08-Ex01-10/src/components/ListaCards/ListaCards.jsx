@@ -17,6 +17,8 @@ export const ListaCards = ({ produtos }) => {
     }
   }
 
+  console.log(selectedCardId)
+
   return (
     <ul className={styles.lista}>
       {produtos.map(produto => (

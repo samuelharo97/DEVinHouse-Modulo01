@@ -6,6 +6,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body{
+    height: 100vh;
+    width: 100%;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+  }
+
   a, button {
     text-decoration: none;
     cursor: pointer;

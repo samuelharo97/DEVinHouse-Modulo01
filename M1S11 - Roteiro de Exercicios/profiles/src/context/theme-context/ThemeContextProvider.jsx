@@ -16,7 +16,7 @@ export const ThemeContextProvider = ({ children }) => {
     }
   }
 
-  /*  useEffect(() => {
+  /* useEffect(() => {
     return () => {
       setDark(JSON.parse(localStorage.getItem('@Profiles: Theme')) || null)
     }

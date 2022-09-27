@@ -2,6 +2,9 @@ import PropTypes from 'prop-types'
 import styles from './FiltroSecao.module.css'
 
 export function FiltroSecao({ array, onSelecionarSecoes }) {
+
+  
+
   return (
     <div className={styles.buttonContainer}>
       {array.map((item, index) => (

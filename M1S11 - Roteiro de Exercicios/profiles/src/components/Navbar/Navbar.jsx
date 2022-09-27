@@ -6,7 +6,7 @@ export const Navbar = colorScheme => {
     <Container variant={theme}>
       <img src="logo.png" alt="logo"></img>
       <nav>
-        <h1>My favorite profiles</h1>
+        <h1>GitFav</h1>
       </nav>
       <button onClick={switchTheme}></button>
     </Container>
